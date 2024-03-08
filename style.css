@@ -1,0 +1,144 @@
+*{
+    
+    font-family:arial;
+}
+/* Main div styling */
+    .main-div{
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto ;
+    width: 35%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-image: linear-gradient(to right, #d5c56f ,#a09553);
+    }
+    /* styling the heading */
+    h2{
+        color: rgb(44, 42, 42);
+        text-align: center;
+    }
+    /* styling the input filed */
+    #todo{
+        height: 40px;
+        /* width:  250px; */
+        border-radius: 5px;
+        border: none;
+        flex: 1 2 2%;
+        margin-left: 20px;
+        padding-left: 10px;
+        background-color: rgb(221, 225, 228);
+    }
+/* input and button addtask and delete task div */
+    .input-button{ 
+        display: flex;
+        flex-direction: row;
+    }
+    /* button div styling */
+    .btndiv{
+        margin-left: 20px;
+    }
+    button{
+        height: 40px;
+        color: white;
+        background-color:  rgb(225, 8, 8);;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight:normal;
+    }
+    button:hover{
+        background-color:rgb(242, 26, 26);
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+/* add task button styling */
+    #addTask{
+            background-color: rgb(133, 131, 131);
+    }
+ /* delete button styling */
+ #btnDelete{
+    width: 75px;
+    /* height: 40px; */
+    margin-bottom: 5px;
+   
+ }
+ /* Edit button styling */
+ #btnEdit{
+        /* color: rgb(0, 0, 0); */
+        background-color: rgb(3, 106, 3);
+        width: 70px;
+        font-weight:normal;
+        margin-bottom: 5px;
+        margin-right: 5px;
+ }
+ /* list item and button edit and delete main div */
+ .list-btn-div{
+    display: flex;
+    justify-content: space-between;
+}
+/* list item div*/
+.list-btn-div li{
+    color: white;
+    color: rgb(48, 46, 46);
+    font-size:18px;
+    text-transform: capitalize;
+    padding-top: 10px;
+    /* list-style-type:none; */
+}
+/* count the total task in todo list */
+.counter{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 50px;
+    color:  rgb(34, 135, 153);
+    text-decoration: none;
+    padding: 12px 20px;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid  rgb(34, 135, 153);
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+    font-size: 17px;
+}
+.counter:after{
+   background: rgb(34, 135, 153);
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0%;
+   height: 100%;
+   z-index: -1;
+   transition: all 0.5s ease 0s;
+   cursor: pointer;
+}
+.counter:hover{
+    color: white;
+    cursor: pointer;
+}
+.counter:hover:after{
+    width: 100%;
+}
+
+.counter .task{
+    letter-spacing: 0.1rem;
+    font-weight:bolder;
+
+}
+.counter .taskcount{
+    position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: rgb(22, 114, 131);
+  color: white;
+}
+.taskcount:hover{
+    background-color: rgb(36, 131, 148);
+    cursor: pointer;
+}

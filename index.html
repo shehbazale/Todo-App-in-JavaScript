@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main div start-->
+ <div class="main-div">
+    <h2>TODO APP</h2>
+<!-- Div for input and button section start -->
+<div class="input-button">
+    <input type="text " placeholder="Enter Todo" id="todo">
+    <!-- Button div section start -->
+    <div class="btndiv">
+        <button id="addTask" onclick="addTask()">Add Task</button> |
+        <button onclick="clearAll()">Clear Task</button>
+    </div>
+    <!-- Button div end section -->
+</div>
+<!-- Div for input and button section start -->
+
+    <!-- Count the total task in todo list start -->
+    <div class="counter"><span class="task">Task</span>  <span class="taskcount">0</span>
+    </div>
+ <!-- Count the total task in todo list end -->
+ <!-- show the todo items in ul section start-->
+        <ul>   
+
+        </ul>
+    <!-- show the todo items in ul section end -->
+</div>
+<!-- Main div end -->
+    <script src="app.js"></script>
+</body>
+</html> 
