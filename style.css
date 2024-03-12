@@ -15,7 +15,7 @@
     }
     /* styling the heading */
     h2{
-        color: rgb(44, 42, 42);
+        /* color: rgb(44, 42, 42); */
         text-align: center;
     }
     /* styling the input filed */
@@ -40,8 +40,9 @@
     }
     button{
         height: 40px;
-        color: white;
-        background-color:  rgb(225, 8, 8);;
+        /* color: white; */
+
+        background-color:  rgb(225, 8, 8);
         border: none;
         border-radius: 5px;
         padding: 5px 10px;
@@ -74,28 +75,38 @@
         margin-right: 5px;
  }
  /* list item and button edit and delete main div */
+ #list{
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+ }
+ #list>li {
+    list-style-type: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 5px;
+ } 
+ #list>li:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(65, 64, 64, 0.5);
+ } 
+
  .list-btn-div{
     display: flex;
     justify-content: space-between;
-}
-/* list item div*/
-.list-btn-div li{
-    color: white;
-    color: rgb(48, 46, 46);
-    font-size:18px;
-    text-transform: capitalize;
-    padding-top: 10px;
-    /* list-style-type:none; */
-}
+    align-items: center;
+ }
 /* count the total task in todo list */
 .counter{
     margin-top: 30px;
     margin-left: 20px;
     width: 50px;
-    color:  rgb(34, 135, 153);
+    /* color:  rgb(34, 135, 153); */
     text-decoration: none;
     padding: 12px 20px;
-    position: relative;
     display: inline-block;
     border-radius: 5px;
     border: 1px solid  rgb(34, 135, 153);
@@ -119,6 +130,7 @@
 .counter:hover{
     color: white;
     cursor: pointer;
+  
 }
 .counter:hover:after{
     width: 100%;
@@ -136,9 +148,39 @@
   padding: 5px 10px;
   border-radius: 50%;
   background-color: rgb(22, 114, 131);
-  color: white;
+  transition: transform .2s;
 }
 .taskcount:hover{
     background-color: rgb(36, 131, 148);
     cursor: pointer;
+    -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
 }
+
+
+/* toggle dark and light */
+.dark-bright{
+    display: flex;
+    justify-content: flex-end;
+  margin-right: 30px;
+}
+#moon{
+   width: 15px;
+   height: 15px;
+}
+#moon:hover{
+    cursor: pointer;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+ 
+}
+.dark-mode {
+    background-color: rgb(61, 59, 59);
+    color: white;
+  }
+
+
+  /* -------------------------------------------------- */
+  

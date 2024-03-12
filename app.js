@@ -8,18 +8,18 @@ const taskCount= document.querySelector('.taskcount');
 function renderTodo(){
     listItem.innerHTML= ''
     for (let i = 0; i < todoItems.length; i++){
-        listItem.innerHTML +=(`<div class='list-btn-div'>
-        <div><li>${todoItems[i]}</li></div>
+        listItem.innerHTML +=(`<li> <div class='list-btn-div'>
+        <div>${todoItems[i]}</div>
         <div class='delete-edit-btn'>
         <button id='btnDelete' onclick='deleteTask(${i})'>Delete </button> |
         <button id='btnEdit' onclick ='editTask(${i})'>Edit </button></div>
-        </div>`)
+        </div></li>`)
     }
     taskCount.innerHTML=(`${todoItems.length}`);
 }
 //  Add task in list
  function addTask(){ 
-    if(inputValue.value===''){
+    if(inputValue.value.trim().length<1){
         alert('Please Enter Todo Task')
     }
     else{
@@ -54,11 +54,13 @@ function editTask(index){
 }
 // clear all function
 function clearAll(){
+
     if(todoItems.length===0){
                alert('No task to Delete')
     
             }
     else{
+
             const done = confirm('Are you sure!');
          if (done)
          {
@@ -69,4 +71,17 @@ function clearAll(){
     }
 }
 
-alert(2-4)
+var icon = document.querySelector('#moon');
+
+function myFunction() {
+//    var element = document.body;
+//    element.classList.toggle("dark-mode");
+document.body.classList.toggle('dark-mode');
+if(document.body.classList.contains('dark-mode')){
+    icon.src = "./image/sun.png"
+}
+else{
+    icon.src = "./image/moon.png"
+}
+   
+}
